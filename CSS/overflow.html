@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="overflow.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Overflow:</h2>
+        <p class="head">overflow &bull; overflow-x &bull; overflow-y</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+         /*------Beispiel-1:------*/
+  
+/*CSS*/
+.auto { border: 3px solid #8ACB88;
+        height: 209px;
+        width: 240px; 
+        margin-bottom: 10px;
+        overflow: auto; }
+                
+.scroll { border: 3px solid #8ACB88;
+          height: 209px;
+          width: 240px; 
+          margin-bottom: 10px;
+          overflow: scroll; }
+                
+.hidden { border: 3px solid #8ACB88;
+          height: 160px;
+          width: 220px; 
+          margin-bottom: 10px;
+          overflow: hidden; }
+                  
+.visible { border: 3px solid #8ACB88;
+           height: 160px;
+           width: 220px; 
+           margin-bottom: 10px;
+           overflow: visible; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;span class=&quot;value&quot;&gt;auto&lt;/span&gt;
+  &lt;div class=&quot;auto&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;scroll&lt;/span&gt;
+  &lt;div class=&quot;scroll&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;hidden&lt;/span&gt;
+  &lt;div class=&quot;hidden&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;visible&lt;/span&gt;
+  &lt;div class=&quot;visible&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-2:------*/
+  
+/*CSS*/ 
+.auto-x { border: 3px solid #8ACB88;
+          height: 160px;
+          width: 257px; 
+          margin-bottom: 10px;
+          overflow-x: auto; }
+                
+.scroll-x { border: 3px solid #8ACB88;
+            height: 160px;
+            width: 257px; 
+            margin-bottom: 10px;
+            overflow-x: scroll; }
+                
+.hidden-x { border: 3px solid #8ACB88;
+            height: 160px;
+            width: 220px; 
+            margin-bottom: 10px;
+            overflow-x: hidden; }
+                  
+.visible-x { border: 3px solid #8ACB88;
+             height: 160px;
+             width: 220px; 
+             margin-bottom: 10px;
+             overflow-x: visible; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;span class=&quot;value&quot;&gt;auto&lt;/span&gt;
+  &lt;div class=&quot;auto-x&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;scroll&lt;/span&gt;
+  &lt;div class=&quot;scroll-x&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;hidden&lt;/span&gt;
+  &lt;div class=&quot;hidden-x&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;visible&lt;/span&gt;
+  &lt;div class=&quot;visible-x&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-3:------*/
+  
+/*CSS*/
+.auto-y { border: 3px solid #8ACB88;
+          height: 226px;
+          width: 220px; 
+          margin-bottom: 10px;
+          overflow-y: auto; }
+                
+.scroll-y { border: 3px solid #8ACB88;
+            height: 226px;
+            width: 220px; 
+            margin-bottom: 10px;
+            overflow-y: scroll; }
+                
+.hidden-y { border: 3px solid #8ACB88;
+            height: 160px;
+            width: 220px; 
+            margin-bottom: 10px;
+            overflow-y: hidden; }
+                  
+.visible-y { border: 3px solid #8ACB88;
+             height: 160px;
+             width: 220px; 
+             margin-bottom: 10px;
+             overflow-y: visible; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;span class=&quot;value&quot;&gt;auto&lt;/span&gt;
+  &lt;div class=&quot;auto-y&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;scroll&lt;/span&gt;
+  &lt;div class=&quot;scroll-y&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;hidden&lt;/span&gt;
+  &lt;div class=&quot;hidden-y&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;value&quot;&gt;visible&lt;/span&gt;
+  &lt;div class=&quot;visible-y&quot;&gt;
+    &lt;img src=&quot;foto.jpg&quot; alt=&quot;Test-Foto&quot; /&gt;
+  &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+        </pre>
+      </div>
+      <div class="output">
+        <div class="overflow">
+          <h3>overflow:</h3>
+          <p>Elementenüberfluss (allgemein)</p>
+          <div class="Beispiel">Beispiel-1</div>
+          <span class="value">auto</span>
+          <div class="auto">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">scroll</span>
+          <div class="scroll">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">hidden</span>
+          <div class="hidden">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">visible</span>
+          <div class="visible">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+        </div>
+        <div class="overflow-x">
+          <h3>overflow-x:</h3>
+          <p>Elementenüberfluss
+          <br>(horizontale Ausdehnung)</p>
+          <div class="Beispiel">Beispiel-2</div>
+          <span class="value">auto</span>
+          <div class="auto-x">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">scroll</span>
+          <div class="scroll-x">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">hidden</span>
+          <div class="hidden-x">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">visible</span>
+          <div class="visible-x">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+        </div>
+        <div class="overflow-y">
+          <h3>overflow-y:</h3>
+          <p>Elementenüberfluss
+          <br>(vertikale Ausdehnung)</p>
+          <div class="Beispiel">Beispiel-3</div>
+          <span class="value">auto</span>
+          <div class="auto-y">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">scroll</span>
+          <div class="scroll-y">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">hidden</span>
+          <div class="hidden-y">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+          <span class="value">visible</span>
+          <div class="visible-y">
+            <img src="foto.jpg" alt="Test-Foto" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

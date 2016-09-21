@@ -1,0 +1,118 @@
+html,body { 
+    margin: 0; 
+    background-color: #80afad; 
+	font-family: sans-serif; }
+
+#page { 
+    display: -webkit-flex; 
+    display: flex; 
+    width: 1076px; 
+    margin: auto; }
+
+div.iframe { 
+    height: 580px; 
+    width: 800px; }
+
+iframe { 
+    border: none; 
+    height: 580px; 
+    width: 800px; 
+    margin-bottom: -4px; }
+
+div.nav { 
+    height: 250px; 
+    width: 247px; 
+    background-color: #80afad; 
+    display: -webkit-flex; 
+    display: flex; 
+    -webkit-flex-wrap: wrap; 
+    flex-wrap: wrap; }
+
+.button-1,.button-2,.button-3 {
+    background-color: #80afad;
+    padding: 20px;
+	text-align: left;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+	height: 60px;
+	width: 245px; }
+
+.main-1,.main-2,.main-3 {
+	height: 70px;
+	width: 245px; }
+
+.content-1 {
+    display: none;
+    position: relative;
+    background-color: #80afad;
+    width: 245px;
+	height: 200px;
+	text-indent: 40px;
+	padding-top: 10px; }
+
+.content-2 {
+    display: none;
+    position: relative;
+    background-color: #80afad;
+    width: 245px;
+	height: 305px;
+	text-indent: 40px;
+	padding-top: 10px; }
+
+.content-3 {
+    display: none;
+    position: relative;
+    background-color: #80afad;
+    width: 245px;
+	height: 300px;
+	text-indent: 40px;
+	padding-top: 10px; }
+
+.content-1 a,.content-2 a,.content-3 a {
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    display: block; }
+
+hr {
+	border: none;
+	border-top: 1.9px solid black;
+	margin-left: -5px;
+	margin-top: 3px;
+	height:1px; }
+
+.main-1:hover .content-1,.main-2:hover .content-2,.main-3:hover .content-3 { display: block; }
+
+.content-1 a:hover,.content-2 a:hover,.content-3 a:hover { font-weight: bold; }
+
+div.main-1:hover ~ div[class^="main"] { 
+    position: relative; 
+	top: 140px; }
+
+div.main-2:hover + div.main-3 { 
+    position: relative; 
+	top: 267px; }
+
+div.main-2:hover ~ a[class^="link"] { 
+    position: relative; 
+	top: 120px; }
+
+.link { 
+   z-index: 1;
+   text-decoration: none;
+   font-size: 18px;
+   color: #433d3c; }
+
+.home { 
+   text-align: center; 
+   padding: 5px 12px;
+   background-color: #94CAA4;
+   width: 50px;
+   position: absolute;
+   margin-left: -100px;
+   margin-top: 250px;
+   border: none;
+   z-index: 1;
+   border-radius: 5px; }
+

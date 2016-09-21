@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="float.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Float-Layout:</h2>
+        <p class="head">float &bull; clear</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+         /*------Beispiel-1:------*/
+           
+/*CSS*/           
+.container { height: 180px;
+             width: 340px;
+             border: 1px dashed black; 
+             margin-left: -15px; }
+                  
+.div1L,
+.div2L,
+.div3L { height: 30px;
+         width: 40px;
+         background-color: #37a34a; 
+         margin: 8px 5px 0px 8px;
+         float: left; 
+         text-align: center; 
+         padding-top: 10px; }
+                                
+.div4L { height: 138px;
+         width: 250px;
+         background-color: #f6ae54; 
+         padding: 5px;
+         font-size: 13px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;div1L&quot;&gt;div1&lt;/div&gt;
+      &lt;div class=&quot;div2L&quot;&gt;div2&lt;/div&gt;
+      &lt;div class=&quot;div3L&quot;&gt;div3&lt;/div&gt;
+      &lt;div class=&quot;div4L&quot;&gt;Text Text Text....
+      &lt;p&gt;div4&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-2:------*/
+                 
+/*CSS*/          
+.container { height: 180px;
+             width: 340px;
+             border: 1px dashed black; 
+             margin-left: -15px; }
+                  
+.div1R,
+.div2R,
+.div3R { height: 30px;
+         width: 40px;
+         background-color: #37a34a; 
+         margin: 8px 8px 0px 5px;
+         float: right; 
+         text-align: center; 
+         padding-top: 10px; }
+                                
+.div4R { height: 125px;
+         width: 250px;
+         background-color: #f6ae54; 
+         padding: 5px;
+         font-size: 13px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;div1R&quot;&gt;div1&lt;/div&gt;
+      &lt;div class=&quot;div2R&quot;&gt;div2&lt;/div&gt;
+      &lt;div class=&quot;div3R&quot;&gt;div3&lt;/div&gt;
+      &lt;div class=&quot;div4R&quot;&gt;Text Text Text....
+      &lt;p&gt;div4&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-3:------*/
+
+/*CSS*/          
+.container { height: 180px;
+             width: 340px;
+             border: 1px dashed black; 
+             margin-left: -15px; }
+                  
+.div1LR,.div2LR { height: 30px;
+                  width: 40px;
+                  background-color: #37a34a; 
+                  margin: 8px 5px 0px 8px;
+                  float: left; 
+                  text-align: center; 
+                  padding-top: 10px; }
+                                                  
+.div3LR { height: 30px;
+          width: 40px;
+          background-color: #37a34a; 
+          margin: 8px 8px 0px 5px;
+          float: right; 
+          text-align: center; 
+          padding-top: 10px; }
+                                
+.div4LR { height: 135px;
+          width: 250px;
+          background-color: #f6ae54; 
+          padding: 5px;
+          font-size: 13px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;div1LR&quot;&gt;div1&lt;/div&gt;
+      &lt;div class=&quot;div2LR&quot;&gt;div2&lt;/div&gt;
+      &lt;div class=&quot;div3LR&quot;&gt;div3&lt;/div&gt;
+      &lt;div class=&quot;div4LR&quot;&gt;Text Text Text....
+      &lt;p&gt;div4&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-4:------*/    
+                
+/*CSS*/                          
+.container { height: 180px;
+             width: 340px;
+             border: 1px dashed black; 
+             margin-left: -15px; }
+                  
+.div1C,
+.div2C,
+.div3C { height: 30px;
+         width: 40px;
+         background-color: #37a34a; 
+         margin: 8px 5px 5px 8px;
+         float: left; 
+         text-align: center; 
+         padding-top: 10px; }
+                                
+.div4C { height: 110px;
+         width: 250px;
+         background-color: #f6ae54; 
+         padding: 5px;
+         font-size: 13px; 
+         clear: left; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;div1C&quot;&gt;div1&lt;/div&gt;
+      &lt;div class=&quot;div2C&quot;&gt;div2&lt;/div&gt;
+      &lt;div class=&quot;div3C&quot;&gt;div3&lt;/div&gt;
+      &lt;div class=&quot;div4C&quot;&gt;Text Text Text....
+      &lt;p&gt;div4&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+        
+        
+        
+        
+        
+        
+        
+        
+        </pre>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>float:left</h3>
+          <div class="Beispiel">Beispiel-1</div>
+          <p>&lt;div1&gt;, &lt;div2&gt;, &lt;div3&gt; mit 
+          <i>float:left</i></p>
+          <div class="container">
+            <div class="div1L">div1</div>
+            <div class="div2L">div2</div>
+            <div class="div3L">div3</div>
+            <div class="div4L">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            <p>div4</p></div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>float:right</h3>
+          <div class="Beispiel">Beispiel-2</div>
+          <p>&lt;div1&gt;, &lt;div2&gt;, &lt;div3&gt; mit 
+          <i>float:right</i></p>
+          <div class="container">
+            <div class="div1R">div1</div>
+            <div class="div2R">div2</div>
+            <div class="div3R">div3</div>
+            <div class="div4R">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            <p>div4</p></div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>float:left und float:right</h3>
+          <div class="Beispiel">Beispiel-3</div>
+          <p>&lt;div1&gt;, &lt;div2&gt; mit 
+          <i>float:left</i>
+          <br>&lt;di3&gt; mit 
+          <i>float:right</i></p>
+          <div class="container">
+            <div class="div1LR">div1</div>
+            <div class="div2LR">div2</div>
+            <div class="div3LR">div3</div>
+            <div class="div4LR">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            <p>div4</p></div>
+          </div>
+        </div>
+        <div class="theme last">
+          <h3>clear:left</h3>
+          <div class="Beispiel">Beispiel-4</div>
+          <p>&lt;div1&gt;, &lt;div2&gt;, &lt;div3&gt; mit 
+          <i>float:left</i>
+          <br>&lt;div4&gt; mit 
+          <i>clear:left</i> beendet das 
+          <i>float:left</i></p>
+          <div class="container">
+            <div class="div1C">div1</div>
+            <div class="div2C">div2</div>
+            <div class="div3C">div3</div>
+            <div class="div4C">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+            <p>div4</p></div>
+          </div>
+          <p>※ Die Eigenschaft 
+          <ins>clear:</ins> kann die Werte 
+          <ins>left</ins>,
+          <br>
+          <ins>right</ins> und 
+          <ins>both</ins> annehmen.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="transition.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Transition:</h2>
+        <p class="head">transition-property &bull; transition-duration &bull; transition-timing-function &bull; <br>transition-delay &bull; transition</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+         /*------Beispiel-1:------*/
+  
+/*CSS*/
+.container1 { height: 200px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+                          
+.container1 p { bottom: -5px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+                          
+.ball-1 
+   { height: 70px;
+     width: 70px;
+     border-radius: 100%;
+     background-color: #8ACB88; 
+     -webkit-transition: height 1s, width 1s;
+     transition: height 1s, width 1s; }
+	 
+.ball-1:hover { height: 150px;
+                width: 150px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class="container1"&gt;
+    &lt;div class="ball-1"&gt;&lt;/div&gt;
+    &lt;p&gt;Bitte mit der Maus &#252;ber den Ball fahren.
+    &lt;/p&gt;
+  &lt;/div&gt;    
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-2:------*/
+  
+/*CSS*/
+.container1 { height: 200px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+                          
+.container1 p { bottom: -5px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+           
+.ball-2 
+   { height: 70px;
+     width: 70px;
+     border-radius: 100%;
+     background-color: #8ACB88; 
+     -webkit-transition: height 5s, width 5s;
+     transition: height 5s, width 5s; }
+	 
+.ball-2:hover { height: 150px;
+                width: 150px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class="container1"&gt;
+    &lt;div class="ball-2"&gt;&lt;/div&gt;
+    &lt;p&gt;Bitte mit der Maus &#252;ber den Ball fahren.
+    &lt;/p&gt;
+  &lt;/div&gt; 
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-3:------*/
+  
+/*CSS*/
+.container2 { height: 220px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+                          
+.container2 p { top: 180px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+           
+.block { height: 22px;
+         width: 85px;
+         background-color: #8ACB88; 
+         margin: 5px; 
+         padding: 4px;
+         -webkit-transition: width 2s;
+         transition: width 2s; }
+
+.linear 
+        {-webkit-transition-timing-function: 
+         linear;
+         transition-timing-function: 
+         linear; }
+.ease 
+        {-webkit-transition-timing-function: 
+         ease;
+         transition-timing-function: 
+         ease; }
+.ease-in 
+        {-webkit-transition-timing-function: 
+         ease-in;
+         transition-timing-function: 
+         ease; }
+.ease-out 
+        {-webkit-transition-timing-function: 
+         ease-out;
+         transition-timing-function: 
+         ease-out; }
+.ease-in-out 
+        {-webkit-transition-timing-function: 
+         ease-in-out;
+         transition-timing-function: 
+         ease-in-out; }
+                   
+.linear:hover { width: 200px; }
+.ease:hover { width: 200px; }
+.ease-in:hover { width: 200px; }
+.ease-out:hover { width: 200px; }
+.ease-in-out:hover { width: 200px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class="container2"&gt;
+    &lt;div class="block linear"&gt;linear
+    &lt;/div&gt;
+    &lt;div class="block ease"&gt;ease
+    &lt;/div&gt;
+    &lt;div class="block ease-in"&gt;ease-in
+    &lt;/div&gt;
+    &lt;div class="block ease-out"&gt;ease-out
+    &lt;/div&gt;
+    &lt;div class="block ease-in-out"&gt;ease-in-out
+    &lt;/div&gt;
+    &lt;p&gt;Bitte mit der Maus &#252;ber die Bl&#246;cke 
+    fahren.&lt;/p&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-4:------*/
+  
+/*CSS*/
+.container1 { height: 200px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+                          
+.container1 p { bottom: -5px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+           
+.ball-3 
+   { height: 70px;
+     width: 70px;
+     border-radius: 100%;
+     background-color: #8ACB88; 
+     -webkit-transition: height 2s, width 2s;
+     transition: height 2s, width 2s; 
+     -webkit-transition-delay: 1s;
+     transition-delay: 1s; }
+	 
+.ball-3:hover { height: 150px;
+                width: 150px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class=&quot;container1&quot;&gt;
+    &lt;div class=&quot;ball-3&quot;&gt;&lt;/div&gt;
+    &lt;p&gt;; Bitte fahren Sie den Mauszeiger auf
+    den Ball und bleiben 1 Sekunde.&lt;/p&gt;
+  &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+</pre>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>transition-property:</h3>
+          <p>CSS-Eigenschaft der Transition.</p>
+          <p>Defaultwert: 
+          <i class="mark">all</i></p>
+          <p>mögliche Angaben:
+          <br>Hier gibt eine Liste der veränderbaren Eigenschaften &minus; 
+          <a class="TPlink" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">CSS animated
+          properties</a></p>
+          <div class="Beispiel">Beispiel-1</div>
+          <span>height , width</span>
+          <div class="container1">
+            <div class="ball-1"></div>
+            <p>Bitte mit der Maus über den Ball fahren.</p>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>transition-duration (nötig):</h3>
+          <p>Dauer der Transition.</p>
+          <p>Defaultwert: 
+          <i class="mark">0</i></p>
+          <p>mögliche Angaben:
+          <br>
+          <i>Sekunden(s) oder Millisekunden(ms)</i></p>
+          <div class="Beispiel">Beispiel-2</div>
+          <span>5s</span>
+          <div class="container1">
+            <div class="ball-2"></div>
+            <p>Bitte mit der Maus über den Ball fahren.</p>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>transition-timing-function:</h3>
+          <p>Geschwindigkeitskurve der Transition.</p>
+          <p>Defaultwert: 
+          <i class="mark">ease</i></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">linear = cubic-bezier (0,0,1,1),
+          <br>ease = cubic-bezier (0.25,0.1,0.25,1),
+          <br>ease-in = cubic-bezier (0.42,0,1,1),
+          <br>ease-out = cubic-bezier (0,0,0.58,1),
+          <br>ease-in-out = cubic-bezier (0.42,0,0.58,1),
+          <br>cubic-bezier (n,n,n,n) [n: zwischen 0 bis 1]</i></p>
+          <div class="Beispiel">Beispiel-3</div>
+          <div class="container2">
+            <div class="block linear">linear</div>
+            <div class="block ease">ease</div>
+            <div class="block ease-in">ease-in</div>
+            <div class="block ease-out">ease-out</div>
+            <div class="block ease-in-out">ease-in-out</div>
+            <p>Bitte mit der Maus über die Blöcke fahren.</p>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>transition-delay:</h3>
+          <p>Verzögerung der Transition.</p>
+          <p>Defaultwert: 
+          <i class="mark">0</i></p>
+          <p>mögliche Angaben:
+          <br>
+          <i>Sekunden(s) oder Millisekunden(ms)</i></p>
+          <div class="Beispiel">Beispiel-4</div>
+          <span>1s</span>
+          <div class="container1">
+            <div class="ball-3"></div>
+            <p>Bitte fahren Sie den Mauszeiger auf den Ball und bleiben 1 Sekunde.</p>
+          </div>
+        </div>
+        <div class="theme last">
+          <h3>transition:</h3>
+          <p>Die Kurzschreibweise für die vier Eigen-
+          <br>schaften transition-property, transition-duration, transition-timing-function, transition-delay.</p>
+          <p>
+          <i class="kurzmark">transition:
+          <br>[property] [duration] [timing-function] [delay];</i> Defaultwert: 
+          <i class="mark">all 0 ease 0</i></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

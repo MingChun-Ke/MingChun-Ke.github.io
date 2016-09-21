@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="datentypen.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Datentypen:</h2>
+        <p class="head">String &bull; Number &bull; Boolean &bull; Object &bull; Array &bull; Null &bull; Undefined</p>
+      </div>
+      <div class="output">
+        <table border="1">
+          <tr>
+            <th>Arten von Datentypen</th>
+            <th>Datentypen</th>
+            <th>Beispiel</th>
+          </tr>
+          <tr>
+            <td rowspan="3">Primäre Datentypen</td>
+            <td>String</td>
+            <td>var a1 = &quot;Hello World!&quot;;
+            <br>var name = &#39;Peter&#39;;
+            <br>var model = &quot;123&quot;</td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td>var age = 18;
+            <br>var a1 = -54.36;
+            <br>var octal_num = 0256;
+            <br>var hex_num = 0x5A3;
+            <br>var googol = 1E100;</td>
+          </tr>
+          <tr>
+            <td>Boolean</td>
+            <td>var t1 = ture;
+            <br>var f1 = false;</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Zusammengesetzte Datentypen</td>
+            <td>Object</td>
+            <td>var dog = {
+            <br>name:&quot;Coco&quot;, age:2, breed:&quot;Dachshund&quot;
+            <br>};
+            <br>
+            <br>function Dog(name, age, breed) {
+            <br>this.name = name;
+            <br>this.age = age;
+            <br>this.breed = breed;
+            <br>}</td>
+          </tr>
+          <tr>
+            <td>Array</td>
+            <td>var dogs = [&quot;Jack&quot;, &quot;Coco&quot;, &quot;Lucy&quot;];
+            <br>
+            <br>var dogs = [];
+            <br>dogs[0] = &quot;Jack&quot;;
+            <br>dogs[1] = &quot;Coco&quot;;
+            <br>dogs[2] = &quot;Lucy&quot;;</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Spezielle Datentypen</td>
+            <td>Null</td>
+            <td>var dog = null;</td>
+          </tr>
+          <tr>
+            <td>Undefined</td>
+            <td>var dog;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

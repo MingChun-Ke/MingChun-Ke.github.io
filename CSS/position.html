@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="position.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Vergleich von Positionswerten:</h2>
+        <p class="head">position:static &bull; position:relative &bull; position:absolute &bull; position:fixed</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+         /*------Beispiel-1:------*/
+  
+/*CSS*/   
+.container-S { height: 200px;
+               width: 250px; 
+               border: 1px solid red; }
+                
+.div1-S { height: 60px;
+          width: 60px;
+          background-color: #37a34a; 
+          padding: 9px; } 
+                  
+.div2-S { height: 60px;
+          width: 60px;
+          background-color: #f6ae54; 
+          padding: 9px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class=&quot;container-S&quot;&gt;
+    &lt;div class=&quot;div1-S&quot;&gt;div-1 position:
+    &lt;br&gt;static&lt;/div&gt;
+    &lt;div class=&quot;div2-S&quot;&gt;div-2 position:
+    &lt;br&gt;static&lt;/div&gt;
+    &lt;p&gt;Eltern-Container&lt;br&gt;position: static
+    &lt;/p&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-2:------*/
+  
+/*CSS*/                                 
+.container-R { height: 200px;
+               width: 250px; 
+               border: 1px solid red; }
+                
+.div1-R { height: 60px;
+          width: 60px;
+          background-color: #37a34a; 
+          padding: 9px; 
+          position: relative; 
+          top: 15px;
+          left: 30px; } 
+                  
+.div2-R { height: 60px;
+          width: 60px;
+          background-color: #f6ae54; 
+          padding: 9px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class=&quot;container-R&quot;&gt;
+    &lt;div class=&quot;div1-R&quot;&gt;div-1 position:
+    &lt;br&gt;relative&lt;/div&gt;
+    &lt;div class=&quot;div2-R&quot;&gt;div-2 position:
+    &lt;br&gt;static&lt;/div&gt;
+    &lt;p&gt;Eltern-Container&lt;br&gt;position: static
+    &lt;/p&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-3:------*/
+  
+/*CSS*/                                 
+.container-A { height: 200px;
+               width: 250px; 
+               border: 1px solid red; 
+               position: relative; }
+                
+.div1-A { height: 60px;
+          width: 60px;
+          background-color: #37a34a; 
+          padding: 9px; 
+          position: absolute; 
+          top: 16px;
+          left: 55px; } 
+                  
+.div2-A { height: 60px;
+          width: 60px;
+          background-color: #f6ae54; 
+          padding: 9px; }
+                  
+.div3-A { height: 60px;
+          width: 60px;
+          padding: 9px; 
+          border: 1px dashed gray; 
+          color: gray; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class=&quot;container-A&quot;&gt;
+    &lt;div class=&quot;div1-A&quot;&gt;div-1 position:
+    &lt;br&gt;absolute&lt;/div&gt;
+    &lt;div class=&quot;div2-A&quot;&gt;div-2 position:
+    &lt;br&gt;static&lt;/div&gt;
+    &lt;div class=&quot;div3-A&quot;&gt;originale&lt;br&gt;div2-
+    &lt;br&gt;Position&lt;/div&gt;
+    &lt;p&gt;Eltern-Container&lt;br&gt;
+    position: relative
+    &lt;/p&gt;
+  &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-4:------*/
+  
+/*CSS*/                   
+.div-F { height: 80px;
+         width: 40px;
+         padding: 7px;
+         position: fixed;
+         top: 190px;
+         left: 730px; 
+         background-color: #37a34a; 
+         opacity: 0.7; }
+        </pre>
+        <pre class="prettyprint lang-html">
+  &lt;!--HTML--&gt;
+  &lt;div class=&quot;div-F&quot;&gt;
+  ich&lt;br&gt;bin&lt;br&gt;fixed-&lt;br&gt;div
+  &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+        </pre>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>Statische Position (Defaultwert):</h3>
+          <p>Bei statische Position wirkt Eigenschaften
+          <br>top, right, bottom und left nicht.</p>
+          <div class="Beispiel">Beispiel-1</div>
+          <div class="conatiner-S">
+            <div class="div1-S">div-1 position:
+            <br>static</div>
+            <div class="div2-S">div-2 position:
+            <br>static</div>
+            <p class="containerP">Eltern-Container
+            <br>position: static</p>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>Relative Position:</h3>
+          <p>Relative Positionierung zur Standardposition.</p>
+          <div class="Beispiel">Beispiel-2</div>
+          <p>Angaben für &lt;div-1&gt; &minus; 
+          <i>top:15px, left:30px</i></p>
+          <div class="conatiner-R">
+            <div class="div1-R">div-1 position:
+            <br>relative</div>
+            <div class="div2-R">div-2 position:
+            <br>static</div>
+            <p class="containerP">Eltern-Container
+            <br>position: static</p>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>Absolute Position:</h3>
+          <p>Sitzt an einer absoluten Position.
+          <br></p>
+          <div class="Beispiel">Beispiel-3</div>
+          <p>Angaben für &lt;div-1&gt; &minus;  
+          <i>top:16px, left:55px</i></p>
+          <div class="conatiner-A">
+            <div class="div1-A">div-1 position:
+            <br>absolute</div>
+            <div class="div2-A">div-2 position:
+            <br>static</div>
+            <div class="div3-A">originale
+            <br>div2-
+            <br>Position</div>
+            <p class="containerP">Eltern-Container
+            <br>position: relative</p>
+          </div>
+        </div>
+        <div class="theme last">
+          <h3>Fixierte Position:</h3>
+          <p>Beim Scrollen auch fest positioniert.</p>
+          <div class="Beispiel">Beispiel-4</div>
+          <p>Sehen Sie bitte das fixed-Element an der
+          <br>rechte Seite ein.</p>
+          <p>Angaben für &lt;fixed-div&gt;<br> &minus; 
+          <i>top:190px, left:730px</i></p>
+          <div class="div-F">ich
+          <br>bin
+          <br>fixed-
+          <br>div</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="function.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+    <script>
+     function myFirstFun()
+     {
+     alert("Hallo Welt!");
+     }
+    </script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Funktionen:</h2>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>Funktionsaufruf:</h3>
+          <p>Eine Funktion wird ausgeführt, wenn:</p>
+          <ol>
+            <li>ein Ereignis geschieht.</li>
+            <li>die aufgerufen wird.</li>
+            <li>die ruft sich selbst auf (automatisch).</li>
+          </ol>
+        </div>
+        <div class="theme">
+          <h3>Syntax der Funktion (ohne Parameter):</h3>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    //JavaScript:
+    function myFirstFun()
+    {
+    alert(&quot;Hallo Welt!&quot;);
+    }
+   
+    //HTML:
+    &lt;button onclick=&quot;myFirstFun()&quot;&gt;hier klicken&lt;/button&gt;
+          </pre>Output: <button onclick="myFirstFun()">hier klicken</button>
+		</div>
+        <div class="theme">
+          <h3>Syntax der Funktion (mit Parameter):</h3>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    function myFirstFun(x,y,z) {
+    return x * y * z;
+    }
+    document.write(myFirstFun(2,4,6)); <i>// ergibt 48</i>
+    <i>//x,y,z sind Parameter.</i>
+          </pre>
+        </div>
+        <div class="theme last">
+          <h3>Funktionen als Variablen verwendet werden:</h3>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var myFun = function (x,y,z) {return x * y * z};
+    document.write(myFun(2,4,6)); <i>// ergibt 48</i>
+    <i>/*diese Funktion ist auch eine anonyme Funktion
+    (Funktion ohne Name).*/</i>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+html,body { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	font-family: sans-serif; }
+
+.frame { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; }
+
+.header { 
+    width: 100%;
+    height: 17%;
+    background-color: #edf1f7;
+    position: relative;
+    margin: 0; 
+    float: left; }
+	
+.header h2 { font-family: "Lucida Sans Unicode", sans-serif; 
+             margin-left: 35px; }
+			 
+p.head { margin-left: 35px; 
+	     margin-top: -17px; 
+	     letter-spacing: 1px; 
+         font-size: 14px; }
+
+.code { 
+    width: 51%; 
+    height: 83%; 
+    background-color: #333; 
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+
+.lang-css { padding: 15px 15px; }
+.lang-html { margin-left: 5px; }
+
+.output { 
+    width: 49%; 
+    height: 83%; 
+    background-color: white;
+    float: left;
+	overflow-y: scroll; }
+
+.theme { margin-top: 50px;
+         margin-left: 30px; }
+	
+.first { margin-top: 15px;
+         margin-left: 30px; }
+		 
+.last { margin-top: 50px;
+        margin-left: 30px; 
+        margin-bottom: 150px; }
+	
+/*@keyframes*/
+.ball-1 { height: 75px;
+          width: 75px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          position: relative;
+          -webkit-animation-name: KF-1;
+          animation-name: KF-1;
+          -webkit-animation-duration: 4s;
+          animation-duration: 4s; 
+          -webkit-animation-iteration-count: infinite; 
+          animation-iteration-count: infinite; }
+		
+@-webkit-keyframes KF-1 { 0% {left:0px; top:0px;}
+                          33% {left:75px; top:125px;}
+                          66% {left:150px; top:0px;}
+                          100% {left:225px; top:125px;} }					
+@keyframes KF-1 { 0% {left:0px; top:0px;}
+                  33% {left:75px; top:125px;}
+                  66% {left:150px; top:0px;}
+                  100% {left:225px; top:125px;} }
+				 
+.ball-2 { height: 75px;
+          width: 75px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          position: relative;
+          -webkit-animation-name: KF-2;
+          animation-name: KF-2;
+          -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+          -webkit-animation-iteration-count: infinite; 
+          animation-iteration-count: infinite; }
+		
+@-webkit-keyframes KF-2 { from {left:0px; top:0px;}
+                          to {left:225px; top:125px;} }						
+@keyframes KF-2 { from {left:0px; top:0px;}
+                  to {left:225px; top:125px;} }
+
+/*animation-timing-function*/				   
+.block-1 { height: 22px;
+           width: 85px;
+           background-color: #8ACB88; 
+           margin: 5px; 
+           padding: 4px;
+           position: relative;
+           -webkit-animation-name: TF;
+           animation-name: TF;
+           -webkit-animation-duration: 6s;
+           animation-duration: 6s; 
+           -webkit-animation-iteration-count: infinite; 
+           animation-iteration-count: infinite; }
+
+.linear {-webkit-animation-timing-function: linear;
+         animation-timing-function: linear; }
+.ease {-webkit-animation-timing-function: ease;
+       animation-timing-function: ease; }
+.ease-in {-webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease; }
+.ease-out {-webkit-animation-timing-function: ease-out;
+           animation-timing-function: ease-out; }
+.ease-in-out {-webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out; }
+		 
+@-webkit-keyframes TF { from {left:0px; top:0px;}
+                        to {left:202px; top:0px;} }						
+@keyframes TF { from {left:0px; top:0px;}
+                to {left:202px; top:0px;} }
+
+/*animation-delay*/
+.ball-3 { height: 75px;
+          width: 75px;
+          top: 35px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          position: relative; }
+		  
+#click-1:checked ~ .ball-3 { -webkit-animation-name: delay;
+                             animation-name: delay;
+                             -webkit-animation-duration: 3s;
+                             animation-duration: 3s;
+                             -webkit-animation-delay: 2s;
+                             animation-delay: 2s; }
+		  
+@-webkit-keyframes delay { from {left:0px; top:35px;}
+                           to {left:225px; top:35px;} }						
+@keyframes delay { from {left:0px; top:35px;}
+                   to {left:225px; top:35px;} }
+				   
+.container1 p { position: absolute;
+                top: 5px;
+                left: 5px; }
+
+/*animation-iteration-count*/
+.ball-4 { height: 75px;
+          width: 75px;
+          margin-bottom: 10px;
+          line-height: 75px;
+          text-align: center;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          position: relative; }
+		  
+#click-2:checked ~ .ball-4 { -webkit-animation-name: times;
+                             animation-name: times;
+                            -webkit-animation-duration: 3s;
+                            animation-duration: 3s; }
+
+.dreimal { -webkit-animation-iteration-count: 3;
+           animation-iteration-count: 3; }
+		
+.infinite { -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+		  
+@-webkit-keyframes times { from {left:0px; top:0px;}
+                           to {left:225px; top:0px;} }						
+@keyframes times { from {left:0px; top:0px;}
+                   to {left:225px; top:0px;} }
+
+/*animation-direction*/
+.block-2 { height: 40px;
+           width: 85px;
+           background-color: #8ACB88; 
+           margin: 5px; 
+           padding: 4px;
+           position: relative;
+           -webkit-animation-name: direction;
+           animation-name: direction;
+           -webkit-animation-duration: 3s;
+           animation-duration: 3s; 
+           -webkit-animation-iteration-count: infinite; 
+           animation-iteration-count: infinite; }
+		   
+.normal { -webkit-animation-direction: normal;
+          animation-direction: normal; }
+.reverse { -webkit-animation-direction: reverse;
+          animation-direction: reverse; }
+.alternate { -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+.alternate-reverse { -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
+		  
+@-webkit-keyframes direction { from {left:0px; top:0px;}
+                               to {left:202px; top:0px;} }						
+@keyframes direction { from {left:0px; top:0px;}
+                       to {left:202px; top:0px;} }
+
+/*animation-fill-mode*/
+.block-3 { height: 30px;
+           width: 85px;
+           background-color: #8ACB88;
+           margin: 5px; 
+           padding: 4px;
+           position: relative; }
+		   
+#click-3:checked ~ .block-3 { -webkit-animation-name: fill-mode;
+                              animation-name: fill-mode;
+                              -webkit-animation-duration: 4s;
+                              animation-duration: 4s; 
+                              -webkit-animation-delay: 2s;
+                              animation-delay: 2s; }
+		   
+.none { -webkit-animation-fill-mode: none;
+        animation-fill-mode: none; }
+.forwards { -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+.backwards { -webkit-animation-fill-mode: backwards;
+             animation-fill-mode: backwards; }
+.both { -webkit-animation-fill-mode: both;
+        animation-fill-mode: both; }
+		
+@-webkit-keyframes fill-mode { 0% { background-color: #F6AE54; left:0px; top:0px;}
+                               50% { background-color: #F6AE54; left:0px; top:0px;}
+                               100% { background-color: #8ec2c0; left:202px; top:0px;} }						
+@keyframes fill-mode { 0% { background-color: #F6AE54; left:0px; top:0px;}
+                       50% { background-color: #F6AE54; left:0px; top:0px;}
+                       100% { background-color: #8ec2c0; left:202px; top:0px;} }
+					   
+/*animation-play-state*/
+.ball-5 { height: 75px;
+          width: 75px;
+          margin-bottom: 10px;
+          line-height: 75px;
+          text-align: center;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          position: relative;
+          -webkit-animation-name: play-state;
+          animation-name: play-state;
+          -webkit-animation-duration: 4s;
+          animation-duration: 4s; 
+          -webkit-animation-iteration-count: infinite; 
+          animation-iteration-count: infinite; }
+		  
+.paused { -webkit-animation-play-state: paused;
+          animation-play-state: paused; }
+.running { -webkit-animation-play-state: running;
+           animation-play-state: running; }
+		   
+@-webkit-keyframes play-state { from {left:0px; top:0px;}
+                                to {left:225px; top:0px;} }						
+@keyframes play-state { from {left:0px; top:0px;}
+                        to {left:225px; top:0px;} }
+					   
+/*containers*/					   
+.container1 { height: 200px;
+              width: 300px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              position: relative; }
+			  
+.container2 { height: 220px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+	
+.output div span { background-color: #ffebcd; 
+                   color: #433d3c; 
+                   font-size: 14px; 
+                   padding: 3px 4px 0px 4px; 
+                   border-radius: 5px 5px 0px 0px; }
+	
+.kurzmark { background-color: #e4ffde; }
+.mark { background-color: #fffacd; }
+		
+.Beispiel { 
+   font-size: 14px;
+   color: #433d3c;
+   text-align: center; 
+   padding: 4px 8px 4px 8px;
+   background-color: #edf1f7;
+   width: 290px;
+   height: 15px;
+   border: none;
+   border-radius: 5px; 
+   margin-bottom: 8px; }

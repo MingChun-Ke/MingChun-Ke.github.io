@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="anweisungen.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+    <script>
+//if-Anweisung
+    function ifFun() {
+       var x = "";
+       var time = new Date();
+       var weekDay = time.getDay();
+       if (weekDay > 0) {
+           x="Heute ist ein Werktag.";
+       }
+    document.getElementById("ifdemo").innerHTML = x;
+    }
+
+//if...else-Anweisung
+    function ifElseFun() {
+       var x = "";
+       var time = new Date().getHours();
+       if (time < 12) {
+           x = "Jetzt ist AM (vor dem Mittag)";
+       } else {
+           x = "Jetzt ist PM (nach dem Mittag)";
+       }
+    document.getElementById("ifelsedemo").innerHTML = x;
+    }
+
+//if...else if...else-Anweisung	
+    function ifElseIfElseFun() {
+       var x="";
+       var time=new Date().getHours();
+       if (time>=6 && time<10) {
+	       x = "Guten Morgen!";
+       } else if (time>=10 && time<17) {
+   	       x = "Guten Tag!";
+       } else if (time>=17 && time<23) {
+	       x = "Guten Abend!";
+       } else {
+    	    x = "Gute Nacht!";
+       }
+    document.getElementById("ifelseifelsedemo").innerHTML=x;
+    }
+
+//switch-Anweisung	
+    function switchFun() {
+       var day;
+       switch (new Date().getDay()) {
+          case 1:
+              day = "Heute ist Montag...";
+              break;
+          case 2:
+              day = "Heute ist Dienstag...";
+              break;
+          case 3:
+              day = "Heute ist Mittwoch...";
+              break;
+          case 4:
+              day = "Heute ist Donnerstag...";
+              break;
+          case 5:
+              day = "Heute ist Freitag!";
+              break;
+          default:
+              day = "Wochenende!";
+       }
+    document.getElementById("switchdemo").innerHTML = day;
+    }
+    </script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Bedingte Anweisungen:</h2>
+        <p class="head">if &bull; if...else &bull; if...else if...else &bull; switch</p>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h2>if</h2>
+          <p>Syntax:</p>
+          <pre class="jscode1">
+if (Bedingung) {
+   Anweisungen; <i class="mark">//wird ausgeführt, wenn die Bedingung wahr ist.</i>
+}
+          </pre>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    //JavaScript
+    function ifFun() {
+       var x = &quot;&quot;;
+       var time = new Date();
+       var weekDay = time.getDay();
+       if (weekDay &gt; 0) {
+           x=&quot;Heute ist ein Werktag.&quot;;
+       }
+    document.getElementById(&quot;ifdemo&quot;).innerHTML = x;
+    }
+
+    //HTML
+    &lt;button onclick=&quot;ifFun()&quot;&gt;hier klicken&lt;/button&gt;
+    &lt;span id=&quot;ifdemo&quot;&gt;&lt;/span&gt;
+          </pre>Output: <button onclick="ifFun()">hier klicken</button> <span id="ifdemo"></span>
+		</div>
+        <div class="theme">
+          <h2>if...else</h2>
+          <p>Syntax:</p>
+          <pre class="jscode1">
+if (Bedingung) {
+   Anweisungen1; <i class="mark">//wird ausgeführt, wenn die Bedingung wahr ist.</i>
+} else {
+   Anweisungen2; <i class="mark">//wird ausgeführt, wenn die Bedingung falsch ist.</i>
+}
+          </pre>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    //JavaScript
+    function ifElseFun() {
+       var x = &quot;&quot;;
+       var time = new Date().getHours();
+       if (time &lt; 12) {
+           x = &quot;Jetzt ist AM (vor dem Mittag)&quot;;
+       } else {
+           x = &quot;Jetzt ist PM (nach dem Mittag)&quot;;
+       }
+    document.getElementById(&quot;ifelsedemo&quot;).innerHTML = x;
+    }
+
+    //HTML
+    &lt;button onclick=&quot;ifElseFun()&quot;&gt;hier klicken&lt;/button&gt; 
+    &lt;span id=&quot;ifelsedemo&quot;&gt;&lt;/span&gt;
+          </pre>Output: <button onclick="ifElseFun()">hier klicken</button> <span id="ifelsedemo"></span>
+		</div>
+        <div class="theme">
+          <h2>if...else if...else</h2>
+          <p>Syntax:</p>
+          <pre class="jscode2">
+if (Bedingung1) {
+   Anweisungen1; <i class="mark">//wird ausgeführt, wenn die Bedingung1 wahr ist.</i>
+} else if (Bedingung2) {
+   Anweisungen2; <i class="mark">//wird ausgeführt, wenn die Bedingung1 falsch und die Bedingung2 wahr sind.</i>
+} else {
+   Anweisungen3; <i class="mark">//wird ausgeführt, wenn die Bedingung1 und die Bedingung2 falsch sind.</i>
+}   
+          </pre>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    //JavaScript
+    function ifElseIfElseFun() {
+       var x=&quot;&quot;;
+       var time=new Date().getHours();
+       if (time&gt;=6 &amp;&amp; time&lt;10) {
+               x = &quot;Guten Morgen!&quot;;
+       } else if (time&gt;=10 &amp;&amp; time&lt;17) {
+               x = &quot;Guten Tag!&quot;;
+       } else if (time&gt;=17 &amp;&amp; time&lt;23) {
+               x = &quot;Guten Abend!&quot;;
+       } else {
+               x = &quot;Gute Nacht!&quot;;
+       }
+    document.getElementById(&quot;ifelseifelsedemo&quot;).innerHTML = x;
+    }
+
+    //HTML
+    &lt;button onclick=&quot;ifElseIfElseFun()&quot;&gt;hier klicken&lt;/button&gt; 
+    &lt;span id=&quot;ifelseifelsedemo&quot;&gt;&lt;/span&gt;
+          </pre>Output: <button onclick="ifElseIfElseFun()">hier klicken</button> <span id="ifelseifelsedemo"></span>
+		</div>
+        <div class="theme last">
+          <h2>switch</h2>
+          <p>Syntax:</p>
+          <pre class="jscode3">
+switch (Variable oder Ausdruck) {
+    case Wert1:  
+        Anweisungen1; <i class="mark">//wird ausgeführt, falls Ausdruck oder Variable mit Wert1 übereinstimmt.</i>
+        break;
+    case Wert2:  
+        Anweisungen2; <i class="mark">//wird ausgeführt, falls Ausdruck oder Variable mit Wert2 übereinstimmt.</i>
+        break;
+         
+    ......
+         
+    default:  
+        Anweisungen; <i class="mark">//wird ausgeführt, falls keiner der anderen Fälle erfüllt ist.</i>
+        break;
+}
+          </pre>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    //JavaScript
+    function switchFun() {
+       var day;
+       switch (new Date().getDay()) {
+          case 1:
+              day = &quot;Heute ist Montag...&quot;;
+              break;
+          case 2:
+              day = &quot;Heute ist Dienstag...&quot;;
+              break;
+          case 3:
+              day = &quot;Heute ist Mittwoch...&quot;;
+              break;
+          case 4:
+              day = &quot;Heute ist Donnerstag...&quot;;
+              break;
+          case 5:
+              day = &quot;Heute ist Freitag!&quot;;
+              break;
+          default:
+              day = &quot;Wochenende!&quot;;
+       }
+    document.getElementById(&quot;switchdemo&quot;).innerHTML = day;
+    }
+
+    //HTML
+    &lt;button onclick=&quot;switchFun()&quot;&gt;hier klicken&lt;/button&gt; 
+    &lt;span id=&quot;switchdemo&quot;&gt;&lt;/span&gt;
+          </pre>Output: <button onclick="switchFun()">hier klicken</button> <span id="switchdemo"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

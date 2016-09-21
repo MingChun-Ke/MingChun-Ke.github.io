@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="pseudo.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Anker-Pseudoklassen:</h2>
+        <p class="head">:link &bull; :visited &bull; :hover &bull; :active</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+/*--Anker-Pseudoklassen für Link-Elemente--*/
+
+/*CSS*/  
+a:link { color: #f8b500; 
+         font-size: 26px; 
+         text-decoration: none; }
+  
+a:visited { color: #37a34a; 
+            font-size: 26px; 
+            text-decoration: none; }
+ 
+a:hover { color: #9f6f55; 
+          font-size: 26px; 
+          text-decoration: none; 
+          font-weight: 900; }
+
+a:active { color: #ffec47; 
+           font-size: 26px; 
+           text-decoration: none; 
+           font-weight: 900; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;a href=&quot;https://www.google.de/&quot; 
+    target=&quot;_blank&quot;&gt;Link nach Google&lt;/a&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+/*----:hover auf div-Elemente anwenden----*/
+
+/*CSS*/ 
+.hoverbox { height: 60px;
+            width: 280px;
+            background-color: #f6b483; 
+            margin-top: 30px; }
+
+.hoverbox p { padding: 19px 11px; }
+
+.hoverbox:hover { background-color: #fff462; }
+        </pre>
+        <pre class="prettyprint lang-html">
+   &lt;!--HTML--&gt;
+   &lt;div class="hoverbox"&gt;
+     &lt;p&gt;Bitte mit der Maus &#252;ber mich fahren&lt;/p&gt;
+   &lt;/div&gt;
+
+
+  
+  
+  
+  
+  
+  
+        </pre>
+      </div>
+      <div class="output">
+        <div class="forlinks">
+          <h3>Anker-Pseudoklassen für Link-Elemente:</h3>
+          <a href="https://www.google.de/" target="_blank">Link nach Google</a>
+        </div>
+        <div class="fordiv">
+          <h3>:hover auf div-Elemente anwenden:</h3>
+          <div class="hoverbox">
+            <p>Bitte mit der Maus über mich fahren</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
