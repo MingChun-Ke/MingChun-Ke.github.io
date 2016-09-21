@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="flexbox.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Flexbox-Layout:</h2>
+        <p class="head">flex-direction &bull; flex-wrap &bull; flex-flow &bull; justify-content &bull; align-items &bull; align-content<br>
+        order &bull; flex-grow &bull; flex-shrink &bull; flex-basis &bull; flex &bull; align-self</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+         /*------Beispiel-1:------*/
+  
+/*CSS*/  
+.container1-1 { height: 42px;
+                width: 305px;
+                margin-bottom: 7px;
+                border: 1px solid black;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex; }
+
+.row { -webkit-flex-direction: row;
+       -ms-flex-direction: row;
+       flex-direction: row; }
+.row-reverse
+       { -webkit-flex-direction: row-reverse;
+         -ms-flex-direction: row-reverse;
+         flex-direction: row-reverse; }
+                                
+.container1-2 { height: 210px;
+                width: 305px;
+                margin-bottom: 7px;
+                border: 1px solid black;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex; }
+                                
+.column { -webkit-flex-direction: column; 
+          -ms-flex-direction: column; 
+          flex-direction: column; }
+.column-reverse
+    { -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } 
+                                 
+.flexitem-1 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; 
+              height: 18px; 
+              width: 9px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;row (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container1-1 row&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;row-reverse&lt;/span&gt;
+    &lt;div class=&quot;container1-1 row-reverse&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;column&lt;/span&gt;
+    &lt;div class=&quot;container1-2 column&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;column-reverse&lt;/span&gt;
+    &lt;div class=&quot;container1-2 column-reverse&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-2:------*/
+  
+/*CSS*/ 
+.container2 { height: 85px;
+              width: 140px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; }
+
+.nowrap { -webkit-flex-wrap: nowrap; 
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }                    
+.wrap { -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+.wrap-reverse
+          { -webkit-flex-wrap: wrap-reverse;
+            -ms-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse; }
+
+.flexitem-1 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; 
+              height: 18px; 
+              width: 9px; }                             
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;nowrap (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container2 nowrap&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;wrap&lt;/span&gt;
+    &lt;div class=&quot;container2 wrap&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;wrap-reverse&lt;/span&gt;
+    &lt;div class=&quot;container2 wrap-reverse&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-3:------*/
+  
+/*CSS*/
+.container3 { height: 42px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; }
+                          
+.JCflex-start
+       { -webkit-justify-content: flex-start;
+         -ms-justify-content: flex-start;
+         justify-content: flex-start; }
+.JCflex-end
+        { -webkit-justify-content: flex-end;
+          -ms-justify-content: flex-end;
+          justify-content: flex-end; }
+.JCcenter { -webkit-justify-content: center;
+            -ms-justify-content: center;
+            justify-content: center; }
+.JCspace-between
+    { -webkit-justify-content: space-between;
+      -ms-justify-content: space-between;
+      justify-content: space-between; }
+.JCspace-around
+     { -webkit-justify-content: space-around;
+       -ms-justify-content: space-around;
+       justify-content: space-around; } 
+                          
+.flexitem-1 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; 
+              height: 18px; 
+              width: 9px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;flex-start (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container3 JCflex-start&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;flex-end&lt;/span&gt;
+    &lt;div class=&quot;container3 JCflex-end&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;center&lt;/span&gt;
+    &lt;div class=&quot;container3 JCcenter&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;space-between&lt;/span&gt;
+    &lt;div class=&quot;container3 JCspace-between&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;space-around&lt;/span&gt;
+    &lt;div class=&quot;container3 JCspace-around&quot;&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-1&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-4:------*/
+  
+/*CSS*/
+.container4 { height: 120px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; }
+                          
+.AIflex-start
+           { -webkit-align-items: flex-start;
+             -ms-align-items: flex-start;
+             align-items: flex-start; }
+.AIflex-end { -webkit-align-items: flex-end;
+              -ms-align-items: flex-end;
+              align-items: flex-end; }
+.AIcenter { -webkit-align-items: center;
+            -ms-align-items: center;
+            align-items: center; }
+.AIbaseline { -webkit-align-items: baseline;
+              -ms-align-items: baseline;
+              align-items: baseline; }
+.AIstretch { -webkit-align-items: stretch;
+             -ms-align-items: stretch;
+             align-items: stretch; }
+
+.flexitem-AI { background-color: #8ACB88; 
+               margin: 5px;
+               padding: 7px; 
+               width: 9px; }
+                           
+.AI-item2 { height: 30px; 
+            line-height: 30px; }
+.AI-item3 { height: 50px; 
+            line-height: 50px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;flex-start&lt;/span&gt;
+    &lt;div class=&quot;container4 AIflex-start&quot;&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;flex-end&lt;/span&gt;
+    &lt;div class=&quot;container4 AIflex-end&quot;&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;center&lt;/span&gt;
+    &lt;div class=&quot;container4 AIcenter&quot;&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;baseline&lt;/span&gt;
+    &lt;div class=&quot;container4 AIbaseline&quot;&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;stretch (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container4 AIstretch&quot;&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI AI-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AI&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-5:------*/
+  
+/*CSS*/ 
+.container5 { height: 120px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; 
+              flex-wrap: wrap; }
+                          
+.ACflex-start
+         { -webkit-align-content: flex-start;
+           -ms-align-content: flex-start;
+           align-content: flex-start; }
+.ACflex-end
+           { -webkit-align-content: flex-end;
+             -ms-align-content: flex-end;
+             align-content: flex-end; }
+.ACcenter { -webkit-align-content: center; 
+            -ms-align-content: center;
+            align-content: center; }
+.ACspace-between
+      { -webkit-align-content: space-between;
+        -ms-align-content: space-between;
+        align-content: space-between; }
+.ACspace-around
+       { -webkit-align-content: space-around;
+         -ms-align-content: space-around;
+         align-content: space-around; }
+.ACstretch { -webkit-align-content: stretch;
+             -ms-align-content: stretch;
+             align-content: stretch; }
+
+.flexitem-AC { background-color: #8ACB88; 
+               margin: 5px;
+               padding: 3px; 
+               width: 20px; 
+               text-align: center; }  
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;flex-start&lt;/span&gt;
+    &lt;div class=&quot;container5 ACflex-start&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;flex-end&lt;/span&gt;
+    &lt;div class=&quot;container5 ACflex-end&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;center&lt;/span&gt;
+    &lt;div class=&quot;container5 ACcenter&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;space-between&lt;/span&gt;
+    &lt;div class=&quot;container5 ACspace-between&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;space-around&lt;/span&gt;
+    &lt;div class=&quot;container5 ACspace-around&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;stretch (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container5 ACstretch&quot;&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;5&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;6&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;7&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;8&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;9&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;10&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AC&quot;&gt;11&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-6:------*/
+  
+/*CSS*/
+.container6 { height: 42px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; } 
+                          
+.flexitem-2 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; }
+                          
+.O-item3 { -webkit-order: -2; 
+           -ms-order: -2; 
+           order: -2; }
+.O-item5 { -webkit-order: -1;
+           -ms-order: -1;
+           order: -1; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;0 (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;Nr.3: -2 , Nr.5: -1&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 O-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 O-item5&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-7:------*/
+  
+/*CSS*/ 
+.container6 { height: 42px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; }  
+                          
+.flexitem-2 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; }
+                          
+.G-item3 { -webkit-flex-grow: 2; 
+           -ms-flex-grow: 2; 
+           flex-grow: 2; }
+.G-item5 { -webkit-flex-grow: 3; 
+           -ms-flex-grow: 3;
+           flex-grow: 3; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;0 (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;Nr.3: 2 , Nr.5: 3&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 G-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 G-item5&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-8:------*/
+  
+/*CSS*/ 
+.container6 { height: 42px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; } 
+                          
+.flexitem-S { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; 
+              width: 80px; }
+
+.S-item1 { -webkit-flex-shrink: 1;
+           -ms-flex-shrink: 1; 
+           flex-shrink: 1; }
+.S-item2 { -webkit-flex-shrink: 2; 
+           -ms-flex-shrink: 2; 
+           flex-shrink: 2; }
+.S-item3 { -webkit-flex-shrink: 3; 
+           -ms-flex-shrink: 3;
+           flex-shrink: 3; }
+.S-item4 { -webkit-flex-shrink: 4;
+           -ms-flex-shrink: 4;
+           flex-shrink: 4; }
+.S-item5 { -webkit-flex-shrink: 5;
+           -ms-flex-shrink: 5;
+           flex-shrink: 5; }
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;0 (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-S&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;Nr.1: 1 , Nr.2: 2 , Nr.3: 3 ,
+           Nr.4: 4 , Nr.5: 5&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-S S-item1&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S S-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S S-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S S-item4&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-S S-item5&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-9:------*/
+  
+/*CSS*/
+.container6 { height: 42px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; }
+
+.flexitem-2 { background-color: #8ACB88; 
+              margin: 5px;
+              padding: 7px; }
+
+.B-item3 { -webkit-flex-basis: 40px;
+           -ms-flex-basis: 40px;
+           flex-basis: 40px; }
+.B-item4 { -webkit-flex-basis: 70px;
+           -ms-flex-basis: 70px;
+           flex-basis: 70px; }                    
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;auto (Defaultwert)&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;Nr.3: 40px , Nr.4: 70px&lt;/span&gt;
+    &lt;div class=&quot;container6&quot;&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 B-item3&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2 B-item4&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-2&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-css">
+
+         /*------Beispiel-10:------*/
+  
+/*CSS*/
+.container7 { height: 120px;
+              width: 305px;
+              margin-bottom: 7px;
+              border: 1px solid black;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex; 
+              -webkit-align-items: flex-start;
+              -ms-align-items: flex-start;
+              align-items: flex-start; }
+
+.flexitem-AS { background-color: #8ACB88; 
+               margin: 5px;
+               padding: 7px; 
+               width: 9px; }
+                         
+.AS-item2 { -webkit-align-self: center;
+            -ms-align-self: center;
+            align-self: center; }
+.AS-item4 { -webkit-align-self: flex-end;
+            -ms-align-self: flex-end;
+            align-self: flex-end; }       
+        </pre>
+        <pre class="prettyprint lang-html">
+    &lt;!--HTML--&gt;
+    &lt;span&gt;auto (Defaultwert ,
+           align-items: flex-start)&lt;/span&gt;
+    &lt;div class=&quot;container7&quot;&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span&gt;Nr.2: center , Nr.4: flex-end&lt;/span&gt;
+    &lt;div class=&quot;container7&quot;&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;1&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS AS-item2&quot;&gt;2&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;3&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS AS-item4&quot;&gt;4&lt;/div&gt;
+      &lt;div class=&quot;flexitem-AS&quot;&gt;5&lt;/div&gt;
+    &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+ 
+        </pre>
+      </div>
+      <div class="output">
+        <h2>Eigenschaften des Flex-Containers:</h2>
+        <p class="display">※ Um einen Flex-Container zu definieren,
+        <br>muss der Flex-Container auf 
+        <i class="mark">[display:flex]</i>
+        <br>oder 
+        <i class="mark">[display:inline-flex]</i> gesetzt werden.</p>
+        <div class="theme first">
+          <h3>flex-direction</h3>
+          <p>definiert eine horizontale oder vertikale Ausrichtung und die Reihenfolge.</p>
+          <div class="Beispiel">Beispiel-1</div>
+          <span>row (Defaultwert)</span>
+          <div class="container1-1 row">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>row-reverse</span>
+          <div class="container1-1 row-reverse">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>column</span>
+          <div class="container1-2 column">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>column-reverse</span>
+          <div class="container1-2 column-reverse">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex-wrap</h3>
+          <p>erlaubt oder verbietet den Umbruch in neue Zeile(n).</p>
+          <div class="Beispiel">Beispiel-2</div>
+          <span>nowrap (Defaultwert)</span>
+          <div class="container2 nowrap">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>wrap</span>
+          <div class="container2 wrap">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>wrap-reverse</span>
+          <div class="container2 wrap-reverse">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex-flow</h3>
+          <p>ist die Kurzschreibweise für die Eigenschaften flex-direction und flex-wrap.</p>
+          <p>
+          <i class="kurzmark">flex-flow: [flex-direction] [flex-wrap];</i>
+          <br>Defaultwert: 
+          <i class="mark">row nowrap</i></p>
+        </div>
+        <div class="theme">
+          <h3>justify-content</h3>
+          <p>definiert, wie die Flex-Items entlang der Hauptachse angeordnet werden.</p>
+          <div class="Beispiel">Beispiel-3</div>
+          <span>flex-start (Defaultwert)</span>
+          <div class="container3 JCflex-start">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>flex-end</span>
+          <div class="container3 JCflex-end">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>center</span>
+          <div class="container3 JCcenter">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>space-between</span>
+          <div class="container3 JCspace-between">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+          <span>space-around</span>
+          <div class="container3 JCspace-around">
+            <div class="flexitem-1">1</div>
+            <div class="flexitem-1">2</div>
+            <div class="flexitem-1">3</div>
+            <div class="flexitem-1">4</div>
+            <div class="flexitem-1">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>align-items</h3>
+          <p>definiert, wie die Flex-Items entlang der Querachse angeordnet werden.</p>
+          <div class="Beispiel">Beispiel-4</div>
+          <span>flex-start</span>
+          <div class="container4 AIflex-start">
+            <div class="flexitem-AI">1</div>
+            <div class="flexitem-AI AI-item2">2</div>
+            <div class="flexitem-AI AI-item3">3</div>
+            <div class="flexitem-AI">4</div>
+            <div class="flexitem-AI">5</div>
+          </div>
+          <span>flex-end</span>
+          <div class="container4 AIflex-end">
+            <div class="flexitem-AI">1</div>
+            <div class="flexitem-AI AI-item2">2</div>
+            <div class="flexitem-AI AI-item3">3</div>
+            <div class="flexitem-AI">4</div>
+            <div class="flexitem-AI">5</div>
+          </div>
+          <span>center</span>
+          <div class="container4 AIcenter">
+            <div class="flexitem-AI">1</div>
+            <div class="flexitem-AI AI-item2">2</div>
+            <div class="flexitem-AI AI-item3">3</div>
+            <div class="flexitem-AI">4</div>
+            <div class="flexitem-AI">5</div>
+          </div>
+          <span>baseline</span>
+          <div class="container4 AIbaseline">
+            <div class="flexitem-AI">1</div>
+            <div class="flexitem-AI AI-item2">2</div>
+            <div class="flexitem-AI AI-item3">3</div>
+            <div class="flexitem-AI">4</div>
+            <div class="flexitem-AI">5</div>
+          </div>
+          <span>stretch (Defaultwert)</span>
+          <div class="container4 AIstretch">
+            <div class="flexitem-AI">1</div>
+            <div class="flexitem-AI AI-item2">2</div>
+            <div class="flexitem-AI AI-item3">3</div>
+            <div class="flexitem-AI">4</div>
+            <div class="flexitem-AI">5</div>
+          </div>
+        </div>
+        <div class="theme m-end">
+          <h3>align-content</h3>
+          <p>definiert die Abstände und Ausrichtung der Flex-Items auf der Querachse.
+          <br>
+          <ins>Diese Eigenschaft wirkt nur bei mehreren
+          <br>Zeilen.</ins></p>
+          <div class="Beispiel">Beispiel-5</div>
+          <span>flex-start</span>
+          <div class="container5 ACflex-start">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+          <span>flex-end</span>
+          <div class="container5 ACflex-end">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+          <span>center</span>
+          <div class="container5 ACcenter">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+          <span>space-between</span>
+          <div class="container5 ACspace-between">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+          <span>space-around</span>
+          <div class="container5 ACspace-around">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+          <span>stretch (Defaultwert)</span>
+          <div class="container5 ACstretch">
+            <div class="flexitem-AC">1</div>
+            <div class="flexitem-AC">2</div>
+            <div class="flexitem-AC">3</div>
+            <div class="flexitem-AC">4</div>
+            <div class="flexitem-AC">5</div>
+            <div class="flexitem-AC">6</div>
+            <div class="flexitem-AC">7</div>
+            <div class="flexitem-AC">8</div>
+            <div class="flexitem-AC">9</div>
+            <div class="flexitem-AC">10</div>
+            <div class="flexitem-AC">11</div>
+          </div>
+        </div>
+        <h2>Eigenschaften der Flex-<br>Items:</h2>
+        <div class="theme first">
+          <h3>order</h3>
+          <p>definiert die Reihenfolge der Flex-Items.
+          <br></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">&plusmn; ganzzahlige Zahlen</i></p>
+          <div class="Beispiel">Beispiel-6</div>
+          <span>0 (Defaultwert)</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2">3</div>
+            <div class="flexitem-2">4</div>
+            <div class="flexitem-2">5</div>
+          </div>
+          <span>Nr.3: -2 , Nr.5: -1</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2 O-item3">3</div>
+            <div class="flexitem-2">4</div>
+            <div class="flexitem-2 O-item5">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex-grow</h3>
+          <p>gibt den Wachstumsfaktor eines Flex-Items an.
+          <br>
+          <ins>Diese Eigenschaft wirkt nur, wenn der flex-
+          <br>Container noch übrige Breite oder Höhe gibt.</ins></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">ganzzahlige Zahlen ab 0</i></p>
+          <div class="Beispiel">Beispiel-7</div>
+          <span>0 (Defaultwert)</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2">3</div>
+            <div class="flexitem-2">4</div>
+            <div class="flexitem-2">5</div>
+          </div>
+          <span>Nr.3: 2 , Nr.5: 3</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2 G-item3">3</div>
+            <div class="flexitem-2">4</div>
+            <div class="flexitem-2 G-item5">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex-shrink</h3>
+          <p>gibt den Schrumpffaktor eines Flex-Items an.
+          <br>
+          <ins>Diese Eigenschaft wirkt nur, wenn der flex-
+          <br>Container keine genug Breite oder Höhe gibt.</ins></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">ganzzahlige Zahlen ab 0</i></p>
+          <div class="Beispiel">Beispiel-8</div>
+          <span>0 (Defaultwert)</span>
+          <div class="container6">
+            <div class="flexitem-S">1</div>
+            <div class="flexitem-S">2</div>
+            <div class="flexitem-S">3</div>
+            <div class="flexitem-S">4</div>
+            <div class="flexitem-S">5</div>
+          </div>
+          <span>Nr.1: 1 , Nr.2: 2 , Nr.3: 3 , Nr.4: 4 , Nr.5: 5</span>
+          <div class="container6">
+            <div class="flexitem-S S-item1">1</div>
+            <div class="flexitem-S S-item2">2</div>
+            <div class="flexitem-S S-item3">3</div>
+            <div class="flexitem-S S-item4">4</div>
+            <div class="flexitem-S S-item5">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex-basis</h3>
+          <p>bezeichnet eine Basis-Breite für das Flex-Item.
+          <br></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">prozentuale Werte,
+          <br>absolute Werte,
+          <br>auto</i></p>
+          <div class="Beispiel">Beispiel-9</div>
+          <span>auto (Defaultwert)</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2">3</div>
+            <div class="flexitem-2">4</div>
+            <div class="flexitem-2">5</div>
+          </div>
+          <span>Nr.3: 40px , Nr.4: 70px</span>
+          <div class="container6">
+            <div class="flexitem-2">1</div>
+            <div class="flexitem-2">2</div>
+            <div class="flexitem-2 B-item3">3</div>
+            <div class="flexitem-2 B-item4">4</div>
+            <div class="flexitem-2">5</div>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>flex</h3>
+          <p>ist die Kurzschreibweise für die 3
+          <br>Eigenschaften flex-grow, flex-shrink, flex-basis.</p>
+          <p>
+          <i class="kurzmark">flex: [flex-grow] [flex-shrink] [flex-basis];</i>
+          <br>Defaultwert: 
+          <i class="mark">0 1 auto</i>
+          <br></p>
+          <p>zu empfehlende Angaben:
+          <br>
+          <i class="mark">initial (0 1 auto),
+          <br>auto (1 1 auto),
+          <br>none (0 0 auto),
+          <br>[positive Zahl] ([positive Zahl] 1 0)</i>
+          <br></p>
+        </div>
+        <div class="theme last">
+          <h3>align-self</h3>
+          <p>definiert, wie ein einzelnes Flex-Item auf der Querachse angeordnet wird.
+          <br>
+          <ins>Der Defaultwert &quot;auto&quot; übernimmt die bei der Eigenschaft align-items vorgenommene Einstellung.</ins></p>
+          <p>mögliche Angaben:
+          <br>
+          <i class="mark">auto,
+          <br>flex-start,
+          <br>flex-end,
+          <br>center,
+          <br>baseline,
+          <br>stretch</i></p>
+          <div class="Beispiel">Beispiel-10</div>
+          <span>auto (Defaultwert , align-items: flex-start)</span>
+          <div class="container7">
+            <div class="flexitem-AS">1</div>
+            <div class="flexitem-AS">2</div>
+            <div class="flexitem-AS">3</div>
+            <div class="flexitem-AS">4</div>
+            <div class="flexitem-AS">5</div>
+          </div>
+          <span>Nr.2: center , Nr.4: flex-end</span>
+          <div class="container7">
+            <div class="flexitem-AS">1</div>
+            <div class="flexitem-AS AS-item2">2</div>
+            <div class="flexitem-AS">3</div>
+            <div class="flexitem-AS AS-item4">4</div>
+            <div class="flexitem-AS">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

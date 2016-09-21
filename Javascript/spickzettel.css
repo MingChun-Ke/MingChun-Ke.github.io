@@ -1,0 +1,119 @@
+html,body { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	font-family: sans-serif; }
+
+.frame { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; }
+
+.header { 
+    width: 100%;
+    height: 17%;
+    background-color: #edf1f7;
+    position: relative;
+    margin: 0; 
+    float: left; }
+
+.header h2 { font-family: "Lucida Sans Unicode", sans-serif; 
+             margin-left: 35px; }
+			 
+p.head { margin-left: 35px; 
+	     margin-top: -17px; 
+	     letter-spacing: 1px; 
+         font-size: 14px; }
+
+.output { 
+    width: 100%; 
+    height: 83%; 
+    background-color: white;
+    float: left;
+	overflow-y: scroll;
+	overflow-x: hidden; }
+	
+.theme { margin-top: 80px;
+         margin-left: 120px; }
+		 
+.first { margin-top: 40px; }
+		  
+.last { margin-bottom: 150px; }
+
+/*Reservierte Wörter*/
+.ReWords { border-collapse: collapse;
+           margin-top: 30px;
+	       margin-left: 40px; }
+
+th, td { padding: 8px; }
+
+.ReWords td { height: 20px;
+              width: 90px; }
+
+/*Häufig verwendete HTML-Ereignisse*/			  
+.event { border-collapse: collapse;
+         margin-top: 30px; }
+
+/*Steuerzeichen*/
+.steuerzeichen { border-collapse: collapse;
+                 margin-top: 30px; 
+                 margin-left: 30px; }
+				 
+.steuerzeichen td:first-of-type { text-align: center; }
+
+.steuerzeichen td:nth-of-type(2) { height: 20px;
+                                   width: 185px; 
+                                   padding-left: 30px; }
+
+/*Rechenoperatoren*/
+.rechenOP { border-collapse: collapse;
+            margin-top: 30px; 
+            margin-left: 30px; }
+
+.rechenOP td:nth-of-type(1) { height: 20px;
+                              width: 110px; }
+					
+.rechenOP td:nth-of-type(2) { height: 20px;
+                              width: 185px; 
+							  padding-left: 30px; }
+					
+.rechenOP td:first-of-type { text-align: center; }
+
+/*Zuweisungsoperatoren*/
+.zuweisungsOP { border-collapse: collapse;
+                margin-top: 30px; 
+                margin-left: 30px;
+                text-align: center; }
+				
+.zuweisungsOP th, .zuweisungsOP td { height: 20px; width: 120px; }
+
+/*Vergleichsoperatoren*/
+.vergleichsOP { border-collapse: collapse;
+                margin-top: 30px; 
+                margin-left: 30px; }
+			
+.vergleichsOP td:nth-of-type(1) { height: 20px;
+                                  width: 110px; }
+					
+.vergleichsOP td:nth-of-type(2) { height: 20px;
+                                  width: 280px; 
+							      padding-left: 30px; }
+					
+.vergleichsOP td:first-of-type { text-align: center; }
+
+/*Logische Operatoren*/
+.logischeOP { border-collapse: collapse;
+              margin-top: 30px; 
+              margin-left: 30px;
+              text-align: center; }
+								
+.logischeOP td:nth-of-type(3) { height: 20px;
+                                width: 240px; }
+
+/*Bedingter Operator*/								
+.bedingterOP { border-collapse: collapse; 
+               margin-top: 30px; }
+			   			   
+tr:nth-child(even) { background-color: #F4F6F7; }
+
+@-moz-document url-prefix() { .operatoren { border-spacing: 0px; border-collapse: separate; }}

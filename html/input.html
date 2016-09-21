@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="input.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Vergleich von input-Typen:</h2>
+        <p class="head">text &bull; email &bull; password &bull; radio &bull; checkbox &bull; submit &bull; reset</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-html">
+&lt;form class="text" action="demo_form.php"
+method="get"&gt;
+  &lt;label for="vorname"&gt;Vorname&#12288;&lt;/label&gt;
+  &lt;input type="text" class="text" 
+  name="vorname" id="vorname"&gt;
+  &lt;br&gt;
+  &lt;label for="nachname"&gt;Nachname&#12288;&lt;/label&gt;
+  &lt;input type="text" class="text" 
+  name="nachname" id="nachname"&gt;
+  &lt;br&gt;
+  &lt;label for="email"&gt;E-Mail&#12288;&lt;/label&gt;
+  &lt;input type="email" class="text" 
+  name="email" id="email"&gt;
+  &lt;br&gt;
+  &lt;label for="pwd"&gt;Passwort&#12288;&lt;/label&gt;
+  &lt;input type="password" class="text" 
+  name="pwd" id="pwd"&gt;
+  &lt;br&gt;
+&lt;/form&gt;
+&lt;form class="choose"&gt;
+  Geschlecht
+  &lt;input type="radio" class="choose"
+  name="gender" value="male" 
+  id="male"&gt;
+  &lt;label for="male"&gt;m&#228;nnlich&lt;/label&gt;
+  &lt;input type="radio" class="choose" 
+  name="gender" value="famale" 
+  id="famale"&gt;
+  &lt;label for="famale"&gt;weiblich&lt;/label&gt;
+  &lt;br&gt;
+  &lt;input type="checkbox" class="choose" 
+  name="newsletter" value="abo" 
+  id="abo"&gt;
+  &lt;label for="abo"&gt;
+  Ja, ich m&#246;chte den Newsletter abonnieren.
+  &lt;/label&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="absenden" 
+  id="submit"&gt;
+  &lt;input type="reset" value="zur&#252;cksetzen"&gt;
+&lt;/form&gt;
+
+  
+  
+  
+  
+  
+  
+
+        </pre>
+      </div>
+      <div class="output">
+        <form class="text" action="demo_form.php" method="get">
+        <label for="vorname">Vorname　</label> 
+        <input type="text" class="text" name="vorname" id="vorname" />
+        <br>
+        <label for="nachname">Nachname　</label> 
+        <input type="text" class="text" name="nachname" id="nachname" />
+        <br>
+        <label for="email">E-Mail　</label> 
+        <input type="email" class="text" name="email" id="email" />
+        <br>
+        <label for="pwd">Passwort　</label> 
+        <input type="password" class="text" name="pwd" id="pwd" />
+        <br></form>
+        <form class="choose">Geschlecht　
+        <input type="radio" class="choose" name="gender" value="male" id="male" /> 
+        <label for="male">männlich</label> 
+        <input type="radio" class="choose" name="gender" value="famale" id="famale" /> 
+        <label for="famale">weiblich</label>
+        <br>
+        <input type="checkbox" class="choose" name="newsletter" value="abo" id="abo" /> 
+        <label for="abo">Ja, ich möchte den Newsletter abonnieren.</label>
+        <br>
+        <br>
+        <input type="submit" value="absenden" id="submit" /> 
+        <input type="reset" value="zurücksetzen" /></form>
+      </div>
+    </div>
+  </body>
+</html>

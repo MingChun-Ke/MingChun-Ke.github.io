@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="js-output.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>JavaScript-Output:</h2>
+        <p class="head">document.write() &bull; innerHTML &bull; window.alert() &bull; console.log()</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-html">
+           &lt;!----Beispiel-1:----&gt;
+
+    &lt;div class=&quot;container&quot;&gt;
+    Aktuelles Datum und Uhrzeit:&lt;br&gt;
+      &lt;script&gt;
+      document.write(Date());
+      &lt;/script&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-html">
+
+           &lt;!----Beispiel-2:----&gt;
+
+    &lt;div class="container"&gt;
+      &lt;p id="text"&gt;Hallo!&lt;/p&gt;
+      &lt;script&gt;
+      document.getElementById("text").innerHTML 
+      = "Der text ist ge&#228;ndert worden.";
+      &lt;/script&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-html">
+
+           &lt;!----Beispiel-3:----&gt;
+                   
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;button onclick=&quot;showAlert()&quot;&gt;
+      hier klicken&lt;/button&gt;
+      &lt;script&gt;
+      function showAlert() 
+      {
+      window.alert(&quot;Hallo!&quot;);
+      }
+      &lt;/script&gt;
+    &lt;/div&gt;
+        </pre>
+        <pre class="prettyprint lang-html">
+
+           &lt;!----Beispiel-4:----&gt;
+                 
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;p&gt;Bitte sehen Sie die Konsole des 
+      Browsers an(F12-Taste).&lt;/p&gt;
+      &lt;script&gt;
+      console.log(35 + 65);
+      &lt;/script&gt;
+    &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+        </pre>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>document.write()</h3>
+          <p>Die Methode document.write() gibt Text im Dokument aus.</p>
+          <div class="Beispiel">Beispiel-1</div>
+          <div class="container">
+		  Aktuelles Datum und Uhrzeit:<br>
+            <script>
+            document.write(Date());
+            </script>
+		  </div>
+        </div>
+        <div class="theme">
+          <h3>innerHTML</h3>
+          <p>Die Eigenschaft innerHTML speichert den
+          <br>Inhalt eines HTML-Elements.</p>
+          <div class="Beispiel">Beispiel-2</div>
+          <div class="container">
+            <p id="text">Hallo!</p>
+            <script>
+            document.getElementById("text").innerHTML = "Der text ist geändert worden.";
+            </script>
+          </div>
+        </div>
+        <div class="theme">
+          <h3>window.alert()</h3>
+          <p>Die Methode window.alert() gibt Text in
+          <br>einem Dialogfenster aus.</p>
+          <div class="Beispiel">Beispiel-3</div>
+          <div class="container">
+            <button onclick="showAlert()">hier klicken</button> 
+            <script>
+            function showAlert() {
+            window.alert("Hallo!");
+            }
+            </script>
+          </div>
+        </div>
+        <div class="theme last">
+          <h3>console.log()</h3>
+          <p>Die Methode console.log() gibt Meldungen
+          <br>in der Konsole aus.</p>
+          <div class="Beispiel">Beispiel-4</div>
+          <div class="container">
+            <p>Bitte sehen Sie die Konsole des Browsers an(F12-Taste).</p>
+            <script>
+            console.log(35 + 65);   
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

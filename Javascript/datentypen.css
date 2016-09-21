@@ -1,0 +1,42 @@
+html,body { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	font-family: sans-serif; }
+
+.frame { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; }
+
+.header { 
+    width: 100%;
+    height: 17%;
+    background-color: #edf1f7;
+    position: relative;
+    margin: 0; 
+    float: left; }
+	
+.header h2 { font-family: "Lucida Sans Unicode", sans-serif; 
+             margin-left: 35px; }
+			 
+p.head { margin-left: 35px; 
+	     margin-top: -5px; 
+	     letter-spacing: 2px; }
+
+.output { 
+    width: 100%; 
+    height: 83%; 
+    background-color: white;
+    float: left;
+	overflow-y: scroll;
+	overflow-x: hidden; }		
+
+table { border-collapse: collapse; 
+        margin: 40px 60px 130px 60px; }
+
+@-moz-document url-prefix() { table { border-spacing: 0px; border-collapse: separate; }}
+
+th, td { 
+       	text-align: left;
+        padding: 8px; } 

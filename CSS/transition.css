@@ -1,0 +1,157 @@
+html,body { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	font-family: sans-serif; }
+
+.frame { 
+    height: 100%; 
+	width: 100%; 
+	margin: 0; }
+
+.header { 
+    width: 100%;
+    height: 17%;
+    background-color: #edf1f7;
+    position: relative;
+    margin: 0; 
+    float: left; }
+
+.header h2 { font-family: "Lucida Sans Unicode", sans-serif; 
+             margin-left: 35px; }
+			 
+p.head { margin-left: 35px; 
+	     margin-top: -17px; 
+	     letter-spacing: 2px; 
+		 font-size: 14px; }
+
+.code { 
+    width: 51%; 
+    height: 83%; 
+    background-color: #333; 
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+
+.lang-css { padding: 15px 20px; }
+.lang-html { margin-left: 0px; }
+
+.output { 
+    width: 49%; 
+    height: 83%; 
+    background-color: white;
+    float: left;
+	overflow-y: scroll; }
+
+.theme { margin-top: 50px;
+         margin-left: 30px; }
+	
+.first { margin-top: 15px; }
+		
+.last { margin-bottom: 150px; }
+	
+/*transition-property*/			 
+.ball-1 { height: 70px;
+          width: 70px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          -webkit-transition: height 1s, width 1s;
+          transition: height 1s, width 1s; }
+		
+.ball-1:hover { height: 150px;
+                width: 150px; }
+
+/*transition-duration*/					   
+.ball-2 { height: 70px;
+          width: 70px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          -webkit-transition: height 5s, width 5s;
+          transition: height 5s, width 5s; }
+		  
+.ball-2:hover { height: 150px;
+                width: 150px; }
+
+/*transition-timing-function*/				   
+.block { height: 22px;
+         width: 85px;
+         background-color: #8ACB88; 
+         margin: 5px; 
+         padding: 4px;
+         -webkit-transition: width 2s;
+         transition: width 2s; }
+
+.linear {-webkit-transition-timing-function: linear;
+         transition-timing-function: linear; }
+.ease {-webkit-transition-timing-function: ease;
+       transition-timing-function: ease; }
+.ease-in {-webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease; }
+.ease-out {-webkit-transition-timing-function: ease-out;
+           transition-timing-function: ease-out; }
+.ease-in-out {-webkit-transition-timing-function: ease-in-out;
+              transition-timing-function: ease-in-out; }
+		   
+.linear:hover { width: 200px; }
+.ease:hover { width: 200px; }
+.ease-in:hover { width: 200px; }
+.ease-out:hover { width: 200px; }
+.ease-in-out:hover { width: 200px; }
+
+/*transition-delay*/
+.ball-3 { height: 70px;
+          width: 70px;
+          border-radius: 100%;
+          background-color: #8ACB88; 
+          -webkit-transition: height 2s, width 2s;
+          transition: height 2s, width 2s; 
+          -webkit-transition-delay: 1s;
+          transition-delay: 1s;	}
+		  
+.ball-3:hover { height: 150px;
+                width: 150px; }
+
+/*container*/
+.container1 { height: 200px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+			  
+.container2 { height: 220px;
+              width: 300px;
+              border: 1px solid black; 
+              position: relative; }
+			  
+.container1 p { bottom: -5px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+				
+.container2 p { top: 180px; 
+                left: 8px;
+                font-size: 15px;
+                position: absolute; }
+				
+.Beispiel + span { background-color: #ffebcd; 
+                   color: #433d3c; 
+                   font-size: 14px; 
+                   padding: 3px 4px 0px 4px; 
+                   border-radius: 5px 5px 0px 0px; }
+
+.kurzmark { background-color: #e4ffde; }
+.mark { background-color: #fffacd; }
+
+.TPlink { color: black; }
+.TPlink:hover { color: #09852e; }
+		
+.Beispiel { 
+   font-size: 14px;
+   color: #433d3c;
+   text-align: center; 
+   padding: 4px 8px 4px 8px;
+   background-color: #edf1f7;
+   width: 290px;
+   height: 15px;
+   border: none;
+   border-radius: 5px; 
+   margin-bottom: 8px; }

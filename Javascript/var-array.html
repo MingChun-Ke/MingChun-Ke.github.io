@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="var-array.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Variablen &amp; Arrays:</h2>
+      </div>
+      <div class="output">
+        <h2>Variablen</h2>
+        <div class="theme first">
+          <p>Variablen sind Container für Datenwerte, und die werden durch die
+          <br>var-Anweisung definiert.</p>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var a = 4;
+    var b = 8;
+    var x = a + b;
+    document.write(x); <i>//ergibt 12</i>
+    <i>//a, b, x sind Variablen.</i>
+          </pre>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var dogName = &quot;Lucy&quot;;
+    var dogAge = &quot;3&quot;; 
+    document.write
+    (&quot;Hundename: &quot; + dogName + &quot;&lt;br&gt;&quot; + &quot;Alter: &quot; + dogAge);
+    <i>/*Hundename: Lucy
+      Alter: 3*/</i>
+    <i>//dogName, dogAge sind Variablen.</i>   
+          </pre>
+        </div>
+        <div class="theme">
+          <h3>Die Regeln für selbstvergebene Namen:</h3>
+          <ol>
+            <li>die Namen dürfen keine Leerzeichen enthalten.</li>
+            <li>die Namen dürfen nur aus Buchstaben und Ziffern bestehen.</li>
+            <li>das erste Zeichen der Namen muss ein Buchstabe sein.</li>
+            <li>die Namen dürfen keine deutschen Umlaute oder scharfes S enthalten.</li>
+            <li>die Namen dürfen als einziges Sonderzeichen den Unterstrich &quot;_&quot; enthalten.</li>
+            <li>die Namen dürfen nicht mit einem reservierten Wort identisch sein.</li>
+            <li>Variablen sind case-sensitive.</li>
+            <li>lowerCamelCase.</li>
+          </ol>
+        </div>
+        <div class="theme">
+          <h3>Zeichenkettenvereinigung mit Zahlen:</h3>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var text1 = &quot;Hallo&quot; + &quot;Welt&quot;;
+    var text2 = &quot;Hallo&quot; + 4 + 8;
+    var text3 = 4 + 8 + &quot;Hallo&quot;;
+    document.write(text1); <i>//ergibt HalloWelt</i>
+    document.write(text2); <i>//ergibt Hallo48</i>
+    document.write(text3); <i>//ergibt 12Hallo</i>
+    <i>/*Unterschiedliche Reihenfolge ergibt 
+    unterschiedliches Ergebnis!*/</i>
+          </pre>
+        </div>
+        <h2>Arrays</h2>
+        <div class="theme first">
+          <p>Array ist ein Datentyp, der mehrere Werte unter einem gemeinsamen
+          <br>Namen speichert.</p>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var dogNames = [&quot;Lucy&quot;, &quot;Coco&quot;, &quot;Jack&quot;];
+    document.write(dogNames); <i>//ergibt Lucy,Coco,Jack</i>
+          </pre>
+        </div>
+        <div class="theme">
+          <h3>Zugriff auf einfache Arrays:</h3>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var dogNames = [&quot;Lucy&quot;, &quot;Coco&quot;, &quot;Jack&quot;];
+    document.write(dogNames[0]); <i>//ergibt Lucy</i>
+    document.write(dogNames[1]); <i>//ergibt Coco</i>
+    document.write(dogNames[2]); <i>//ergibt Jack</i>
+    <i>//Das erste Array-Element beginnt ab [0].</i>
+          </pre>
+        </div>
+        <div class="theme">
+          <h3>Eigenschaft length:</h3>
+          <p>Die length-Eigenschaft gibt die Anzahl der Felder eines Arrays an.</p>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var dogNames = [&quot;Amy&quot;, &quot;Lucy&quot;, &quot;Coco&quot;, &quot;Jack&quot;, &quot;Bella&quot;];
+    document.write(dogNames.length); <i>//ergibt 5</i>
+          </pre>
+        </div>
+        <div class="theme">
+          <h3>Methoden push() und pop():</h3>
+          <p>Die push-Methode hängt ein oder mehrere Elemente an das Ende eines Arrays an.
+          <br>Die pop-Methode entfernt das letzte Element aus einem Array.</p>
+          <div class="Beispiel">Beispiel</div>
+          <pre class="prettyprint lang-js">
+    var dogNames = [&quot;Amy&quot;, &quot;Lucy&quot;, &quot;Coco&quot;];
+    dogNames.push(&quot;Jack&quot;, &quot;Bella&quot;);
+    document.write(dogNames); <i>//ergibt Amy,Lucy,Coco,Jack,Bella</i><br>
+    var dogNames = [&quot;Amy&quot;, &quot;Lucy&quot;, &quot;Coco&quot;, &quot;Jack&quot;, &quot;Bella&quot;];
+    dogNames.pop();
+    document.write(dogNames); <i>//ergibt Amy,Lucy,Coco,Jack</i>
+          </pre>
+        </div>
+        <div class="theme last">
+        <h4>※ Hinweis:</h4>
+        <p>Array-Elemente können sogar Objekte oder andere Arrays sein.
+        <br></p>z.B. –
+        <br>myArray[0] = Date.now;
+        <br>myArray[1] = myFunction;
+        <br>myArray[2] = dogNames;</div>
+      </div>
+    </div>
+  </body>
+</html>

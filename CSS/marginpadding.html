@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="marginpadding.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Vergleich von margin &amp; padding:</h2>
+        <p class="head">margin &bull; padding</p>
+      </div>
+      <div class="code">
+        <pre class="prettyprint lang-css">
+/*CSS*/
+.box { height: 280px; 
+       width: 340px; 
+       border: 1px dashed black; 
+       position: relative; 
+       margin-left: -15px; 
+       margin-bottom: 20px; 
+       background-color: #e4fde1; }
+           
+.box span:nth-child(1) { margin-top: 8px;
+                         margin-left: 12px; 
+                         position: absolute; 
+                         font-weight: bold; }
+                        
+.box span:nth-child(2) { margin-top: 8px;
+                         margin-left: 167px; 
+                         position: absolute; }
+
+.box span:nth-child(3) { margin-top: 130px;
+                         margin-left: 295px; 
+                         position: absolute; }
+
+.box span:nth-child(4) { margin-top: 249px;
+                         margin-left: 167px; 
+                         position: absolute; }
+
+.box span:nth-child(5) { margin-top: 130px;
+                         margin-left: 25px; 
+                         position: absolute; }
+
+.inbox { height: 22px; 
+         width: 44px; 
+         border: 3px solid #ffad13; 
+         margin: 35px 54px 39px 80px;
+         background-color: #8acb88;
+         padding: 100px 100px 78px 58px; }
+                 
+.inbox span:nth-child(1) { margin-top: -91px;
+                           margin-left: -46px; 
+                           position: absolute; 
+                           font-weight: bold; 
+                         }
+                                                   
+.inbox span:nth-child(2) { margin-top: -50px;
+                           margin-left: 0px; 
+                           position: absolute; 
+                         }
+                                                
+.inbox span:nth-child(3) { margin-top: 0px;
+                           margin-left: 70px; 
+                           position: absolute;
+                         }
+                                                   
+.inbox span:nth-child(4) { margin-top: 50px;
+                           margin-left: 5px; 
+                           position: absolute; 
+                         }
+                                                   
+.inbox span:nth-child(5) { margin-top: 0px;
+                           margin-left: -47px; 
+                           position: absolute; 
+                         }
+                 
+.inbox mark { font-size: 18px; }
+        </pre>
+        <pre class="prettyprint lang-html">
+       &lt;!--HTML--&gt;                
+       &lt;div class=&quot;box&quot;&gt;
+         &lt;span&gt;- margin -&lt;/span&gt;
+         &lt;span&gt;35px&lt;/span&gt;
+         &lt;span&gt;54px&lt;/span&gt;
+         &lt;span&gt;39px&lt;/span&gt;
+         &lt;span&gt;80px&lt;/span&gt;
+         &lt;div class=&quot;inbox&quot;&gt;
+           &lt;span&gt;- padding -&lt;/span&gt;
+           &lt;span&gt;100px&lt;/span&gt;
+           &lt;span&gt;100px&lt;/span&gt;
+           &lt;span&gt;78px&lt;/span&gt;
+           &lt;span&gt;58px&lt;/span&gt;
+           &lt;mark&gt;Inhalt&lt;/mark&gt;
+         &lt;/div&gt;
+       &lt;/div&gt;
+
+  
+  
+  
+  
+  
+  
+
+        </pre>
+      </div>
+      <div class="output">
+        <div class="boxmodell">
+          <h3>Boxmodell-Beispiel:</h3>
+          <div class="box">
+          <span>- margin -</span> 
+          <span>35px</span> 
+          <span>54px</span> 
+          <span>39px</span> 
+          <span>80px</span>
+          <div class="inbox">
+          <span>- padding -</span> 
+          <span>100px</span> 
+          <span>100px</span> 
+          <span>78px</span> 
+          <span>58px</span> 
+          <mark>Inhalt</mark></div></div>
+          <p>※<hr></p>
+          <span class="note">- Rahmen (border) -</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

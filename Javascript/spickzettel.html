@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="spickzettel.css" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="header">
+        <h2>Spickzettel:</h2>
+        <p class="head">Reservierte Wörter &bull; Häufig verwendete HTML-Ereignisse &bull; Steuerzeichen &bull; Rechenoperatoren &bull; Zuweisungsoperatoren &bull; Vergleichsoperatoren &bull; Logische Operatoren &bull; Bedingter (ternärer) Operator</p>
+      </div>
+      <div class="output">
+        <div class="theme first">
+          <h3>Reservierte Wörter:</h3>
+          <table class="operatoren ReWords" border="1">
+            <tr>
+              <td>abstract</td>
+              <td>arguments</td>
+              <td>boolean</td>
+              <td>break</td>
+            </tr>
+            <tr>
+              <td>byte</td>
+              <td>case</td>
+              <td>catch</td>
+              <td>char</td>
+            </tr>
+            <tr>
+              <td>class</td>
+              <td>const</td>
+              <td>continue</td>
+              <td>debugger</td>
+            </tr>
+            <tr>
+              <td>default</td>
+              <td>delete</td>
+              <td>do</td>
+              <td>double</td>
+            </tr>
+            <tr>
+              <td>else</td>
+              <td>enum</td>
+              <td>eval</td>
+              <td>export</td>
+            </tr>
+            <tr>
+              <td>extends</td>
+              <td>false</td>
+              <td>final</td>
+              <td>finally</td>
+            </tr>
+            <tr>
+              <td>float</td>
+              <td>for</td>
+              <td>function</td>
+              <td>goto</td>
+            </tr>
+            <tr>
+              <td>if</td>
+              <td>implements</td>
+              <td>import</td>
+              <td>in</td>
+            </tr>
+            <tr>
+              <td>instanceof</td>
+              <td>int</td>
+              <td>interface</td>
+              <td>let</td>
+            </tr>
+            <tr>
+              <td>long</td>
+              <td>native</td>
+              <td>new</td>
+              <td>null</td>
+            </tr>
+            <tr>
+              <td>package</td>
+              <td>private</td>
+              <td>protected</td>
+              <td>public</td>
+            </tr>
+            <tr>
+              <td>return</td>
+              <td>short</td>
+              <td>static</td>
+              <td>super</td>
+            </tr>
+            <tr>
+              <td>switch</td>
+              <td>synchronized</td>
+              <td>this</td>
+              <td>throw</td>
+            </tr>
+            <tr>
+              <td>throws</td>
+              <td>transient</td>
+              <td>true</td>
+              <td>try</td>
+            </tr>
+            <tr>
+              <td>typeof</td>
+              <td>var</td>
+              <td>void</td>
+              <td>volatile</td>
+            </tr>
+            <tr>
+              <td>while</td>
+              <td>with</td>
+              <td>yield</td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Häufig verwendete HTML-Ereignisse:</h3>
+          <table class="operatoren event" border="1">
+            <tr>
+              <th>Ereignis</th>
+              <th>Beschreibung</th>
+            </tr>
+            <tr>
+              <td>onchange</td>
+              <td>Ein HTML-Element wurde geändert</td>
+            </tr>
+            <tr>
+              <td>onclick</td>
+              <td>Der Benutzer klickt auf ein HTML-Element (z.B. Textfeld)</td>
+            </tr>
+            <tr>
+              <td>onmouseover</td>
+              <td>Der Mauszeiger bewegt sich über ein HTML-Element</td>
+            </tr>
+            <tr>
+              <td>onmouseout</td>
+              <td>Der Mauszeiger verlässt ein HTML-Element</td>
+            </tr>
+            <tr>
+              <td>onkeydown</td>
+              <td>Der Benutzer drückt eine Taste</td>
+            </tr>
+            <tr>
+              <td>onload</td>
+              <td>Der Browser hat das Webdokument fertig geladen</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Steuerzeichen:</h3>
+          <table class="operatoren steuerzeichen" border="1">
+            <tr>
+              <th>Steuerzeichen</th>
+              <th>Beschreibung</th>
+            </tr>
+            <tr>
+              <td>\&#39;</td>
+              <td>einfaches Anführungszeichen</td>
+            </tr>
+            <tr>
+              <td>\&quot;</td>
+              <td>doppeltes Anführungszeichen</td>
+            </tr>
+            <tr>
+              <td>\\</td>
+              <td>Backslash</td>
+            </tr>
+            <tr>
+              <td>\n</td>
+              <td>Neue Zeile</td>
+            </tr>
+            <tr>
+              <td>\r</td>
+              <td>Carriage return</td>
+            </tr>
+            <tr>
+              <td>\t</td>
+              <td>Tabulatorzeichen</td>
+            </tr>
+            <tr>
+              <td>\b</td>
+              <td>Backspace</td>
+            </tr>
+            <tr>
+              <td>\f</td>
+              <td>Seitenvorschub</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Rechenoperatoren:</h3>
+          <table class="operatoren rechenOP" border="1">
+            <tr>
+              <th>Operator</th>
+              <th>Beschreibung</th>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Addition</td>
+            </tr>
+            <tr>
+              <td>-</td>
+              <td>Subtraktion</td>
+            </tr>
+            <tr>
+              <td>*</td>
+              <td>Multiplikation</td>
+            </tr>
+            <tr>
+              <td>/</td>
+              <td>Division</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>Modulo</td>
+            </tr>
+            <tr>
+              <td>++</td>
+              <td>Inkrement</td>
+            </tr>
+            <tr>
+              <td>--</td>
+              <td>Dekrement</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Zuweisungsoperatoren:</h3>
+          <table class="operatoren zuweisungsOP" border="1">
+            <tr>
+              <th>Operator</th>
+              <th>Schreibweise</th>
+              <th>genauso wie</th>
+            </tr>
+            <tr>
+              <td>=</td>
+              <td>x = y</td>
+              <td>x = y</td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>x += y</td>
+              <td>x = x + y</td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>x -= y</td>
+              <td>x = x - y</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>x *= y</td>
+              <td>x = x * y</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>x /= y</td>
+              <td>x = x / y</td>
+            </tr>
+            <tr>
+              <td>%=</td>
+              <td>x %= y</td>
+              <td>x = x % y</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Vergleichsoperatoren:</h3>
+          <table class="operatoren vergleichsOP" border="1">
+            <tr>
+              <th>Operator</th>
+              <th>Bedeutung</th>
+            </tr>
+            <tr>
+              <td>==</td>
+              <td>gleicher Wert</td>
+            </tr>
+            <tr>
+              <td>===</td>
+              <td>gleicher Wert und gleicher Typ</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>ungleicher wert</td>
+            </tr>
+            <tr>
+              <td>!==</td>
+              <td>ungleicher wert und ungleicher Typ</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>größer als</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>kleiner als</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>größergleich</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>kleinergleich</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme">
+          <h3>Logische Operatoren:</h3>
+          <table class="operatoren logischeOP" border="1">
+            <tr>
+              <th>Operator</th>
+              <th>Bedeutung</th>
+              <th>Beispiel</th>
+            </tr>
+            <tr>
+              <td>&amp;&amp;</td>
+              <td>und</td>
+              <td>x = 1 , y = 10
+              <br>(x &gt; 0 &amp;&amp; y &lt; 11) ist wahr</td>
+            </tr>
+            <tr>
+              <td>||</td>
+              <td>oder</td>
+              <td>x = 1 , y = 10
+              <br>(x &gt; 3 || y &lt; 11) ist wahr</td>
+            </tr>
+            <tr>
+              <td>!</td>
+              <td>nicht</td>
+              <td>x = 1 , y = 10
+              <br>!(y &lt; 11) ist unwahr</td>
+            </tr>
+          </table>
+        </div>
+        <div class="theme last">
+          <h3>Bedingter (ternärer) Operator:</h3>
+          <table class="operatoren bedingterOP" border="1">
+            <tr>
+              <th>Syntax</th>
+              <td>var Variablenname = (Bedingung) ? Wahr-Wert:Unwahr-Wert;</td>
+            </tr>
+            <tr>
+              <th>Beispiel</th>
+              <td>var time = new Date();
+              <br>var x = time.getHours();
+              <br>ampm = (x &gt;= 12) ? &quot;Jetzt ist AM&quot;:&quot;Jetzt ist PM&quot;;</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
